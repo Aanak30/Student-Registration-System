@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Registration System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+     <div class="app-title">
+    <h1> Student Registration System</h1>
+    <p>Register • Edit • Manage Students</p>
+  </div>
+    <!-- LEFT PANEL -->
+    <div class="glass form-panel">
+      <h2>🎓 Register Student</h2>
+
+      <form id="studentForm">
+        <div class="input-group">
+          <input type="text" id="name" required />
+          <label>Student Name</label>
+        </div>
+
+        <div class="input-group">
+          <input type="text" id="studentId" required />
+          <label>Student ID</label>
+        </div>
+
+        <div class="input-group">
+          <input type="email" id="email" required />
+          <label>Email Address</label>
+        </div>
+
+        <div class="input-group">
+          <input type="text" id="contact" required />
+          <label>Contact Number</label>
+        </div>
+
+        <button type="submit">Save Student</button>
+        <p id="errorMsg"></p>
+      </form>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="glass table-panel">
+      <h2>📋 Student Records</h2>
+      <p class="count">Total Students: <span id="totalCount">0</span></p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>ID</th>
+              <th>Email</th>
+              <th>Contact</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="studentTable"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
