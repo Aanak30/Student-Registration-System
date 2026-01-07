@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: rgb(132, 132, 211);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  width: 95%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 20px;
+}
+
+.app-title {
+  grid-column: 1 / -1; 
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.app-title h1 {
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+
+.app-title p {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+
+/* GLASS EFFECT */
+.glass {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 25px;
+  color: white;
+}
+
+/* FORM */
+.form-panel h2 {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  outline: none;
+}
+
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+  top: -8px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: white;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #f1f1f1;
+}
+
+/* TABLE */
+.table-panel h2 {
+  margin-bottom: 10px;
+}
+
+.count {
+  margin-bottom: 10px;
+}
+
+.table-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+th {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.action-btn {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit {
+  background: #a26c16;
+  color: white;
+}
+.delete {
+  background: #b41706;
+  color: white;
+}
+
+/* ERROR */
+#errorMsg {
+  margin-top: 10px;
+  color: #ffdddd;
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+}
